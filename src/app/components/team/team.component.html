@@ -1,0 +1,18 @@
+<p>team works!</p>
+<table>
+    <thead>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Delete</td> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of teamlist">
+            <td>{{item.id}}</td>
+            <td>{{item.teamName}}</td>
+            <td><button (click)="Delete(item.id)">X</button></td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="GetAll()">Get All</button>
+<button (click)="GetById(18)">Get By Id</button>
+<!-- <button (click)="Create(herolist[0])">Create</button> -->

@@ -1,0 +1,47 @@
+
+<table>
+    <thead>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Real Name</td>
+        <td>Place</td>
+        <td>Debut Year</td>
+        <td>Delete</td>
+        <td>Update</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of herolist">
+            <td>{{item.id}}</td>
+            <td>{{item.heroName}}</td>
+            <td>{{item.realName}}</td>
+            <td>{{item.place}}</td>
+            <td>{{item.debutYear}}</td>
+            <td><button (click)="Delete(item.id)">Delete</button></td>
+            <td><button (click)="Update(item)">Update</button></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+    <label>Get All</label>
+<div>
+    <button (click)="GetAll()">Get All</button>
+</div>
+<!-- <app-inputbox></app-inputbox> -->
+<!-- <p> {{ id.value }}</p> -->
+<br>
+<label for="inputId">Input Id to search for</label>
+<div>
+    <input id="inputId" type="number" [formControl]="inputId">
+    <br>
+    <button (click)="GetById(inputId.value)">Get By Id</button>
+</div>
+<br>
+<!-- <label>Create New Hero</label>
+<div>
+    <button (click)="Create(herolist[0])">Create</button>
+</div> -->
+
+
+<app-create-new-hero [item]="CurrentItem"></app-create-new-hero>
+
+<app-update-hero [heroToUpdate]="heroToUpdate" *ngIf="updateIsVisible"></app-update-hero>

@@ -1,0 +1,6 @@
+<p>inputbox works!</p>
+
+<label for="id">Input Id to search for</label>
+<input id="id" type="date" [formControl]="id">
+<p>Value:{{ id.value }}</p>
+<button type="button" (click)="UpdateId()">Update Id</button>

@@ -1,0 +1,25 @@
+<p>update-hero works!</p>
+
+<form [formGroup]="updateHero">
+    <!-- <p> {{item}}</p> -->
+     <br>
+    <label for="heroName">Hero Name: </label>
+    <br>
+    <input id="heroName" type="text" formControlName="heroName">
+    <br>
+    <label for="realName">Real Name: </label>
+    <br>
+    <input id="realName" type="text" formControlName="realName">
+    <br>
+    <label for="place">Place: </label>
+    <br>
+    <input id="place" type="text" formControlName="place">
+    <br>
+    <label for="debutYear">Debut Year: </label>
+    <br>
+    <input id="debutYear" type="date" formControlName="debutYear">
+    <br>
+    <br>
+    <Label>Click to Submit new Hero</Label>
+    <br>
+    <button (click)="Update()">Submit</button>
